@@ -1,0 +1,73 @@
+@import "_variables";
+@import "_typography";
+@import "_navbar";
+@import "_footer";
+@import "_board";
+@import "_schedule";
+@import "_speakers";
+@import "_grid";
+
+body {
+  padding: 0;
+  margin: 0;
+    -webkit-overflow-scrolling: touch;
+}
+.text-center {
+  text-align: center;
+}
+
+.bingo-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .bingo-footer,
+  .bingo-nav {
+    position: fixed;
+    width: 100%;
+  }
+  .bingo-nav {
+    top: 0;
+  }
+  .bingo-footer {
+    bottom: 0;
+  }
+  .bingo-main {
+    margin-top: $navbar-height + 34px;
+    margin-bottom: $footer-height + 4px;
+    flex: 1;
+  }
+}
+
+.twitter-link {
+  background: #0084b4;
+  color: white;
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.logo-row {
+  display: block;
+  text-decoration: none;
+  img {
+    margin-top: 12px;
+    max-width: 90%;
+    max-height: 32px;
+  }
+  caption {
+    display: block;
+    color: #666;
+    padding: 0 5px;
+  }
+}
+
+.btn {
+  background: navy;
+  color: white;
+  margin: 15px;
+  font-size: $font-size-h4;
+  border-radius: 2px;
+  padding: 4px 15px;
+}

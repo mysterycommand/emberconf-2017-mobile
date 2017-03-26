@@ -1,0 +1,14 @@
+.bingo-footer {
+  background-color: $navbar-color;
+  color: white;
+  height: 20px;
+  width: 100%;
+  .copyright {
+    text-align: center;
+    font-size: $font-size-small;
+    line-height: $font-size-small * 1.25;
+    a {
+      color: white;
+    }
+  }
+}

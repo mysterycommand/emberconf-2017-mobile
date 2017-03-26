@@ -1,0 +1,9 @@
+{{#each _days as |day|}}
+<h3 class='text-center'>{{moment-format day.date 'll'}}</h3>
+{{#conf-schedule selectedSession=session}}
+  {{#each day.events as |session|}}
+    {{schedule-item session=session}}
+  {{/each}}
+{{/conf-schedule}}
+
+{{/each}}

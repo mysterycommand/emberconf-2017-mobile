@@ -1,0 +1,6 @@
+<span class="schedule-item__start-time">{{moment-format session.start 'HH:mm a'}}</span>
+{{link-to session.speaker.name 'speakers' (query-params speaker=session.speaker.id) classNames='schedule-item__speaker'}}
+<h4 class='schedule-item__title'>{{session.title}}</h4>
+<p class="schedule-item__description">
+  {{session.description}}
+</p>

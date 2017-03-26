@@ -1,0 +1,39 @@
+{{#liquid-if pickingTarget duration=200}}
+  <button class="btn pull-right"
+    onclick={{action (mut pickingTarget) null}}>
+    Cancel
+  </button>
+  <h4 class='text-center'>Which speaker did it?</h4>
+  <div class="grid">
+  {{#each (array-chunk speakers 5) as |row|}}
+    <div class="grid-row-5">
+    {{#each row as |speaker|}}
+      <div class='grid-row-5-cell' onclick={{action 'finishSelection' speaker.id}}>
+        <img src="{{speaker.photo-url}}" alt="{{speaker.name}}">
+        <div class="speaker-name"> {{speaker.name}}</div>
+      </div>
+    {{/each}}
+    </div>
+  {{/each}}
+  </div>
+{{else}}
+  {{#each _rows as |row|}}
+    <div class='bingo-board__row'>
+      {{#each row as |cell|}}
+        <div class='bingo-board__spot'
+          onclick={{action 'spaceClicked' cell.id}}>
+          {{#with (find-by 'target' cell.id game.moves) as |move|}}
+            {{#if move}}
+              {{#with (find-by 'id' move.speaker speakers) as |speaker|}}
+                <img class='speaker-image' src="{{speaker.photo-url}}" height=64 alt="{{speaker.name}}">
+              {{/with}}
+            {{/if}}
+          {{/with}}
+          <span class="bingo-board__spot-text">
+            {{cell.label}}
+          </span>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+{{/liquid-if}}

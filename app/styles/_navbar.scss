@@ -1,0 +1,34 @@
+.bingo-nav {
+  // height: $navbar-height;
+  background-color: $navbar-color;
+  color: white;
+  z-index: 1000;
+  .bingo-nav__title {
+    text-align: center;
+    font-size: $font-size-h3;
+    line-height: $navbar-height;
+  }
+  .bingo-nav__tabs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    background-color: lighten($navbar-color, 35%);
+    .bingo-nav__tab {
+      display: inline-block;
+      margin: 0;
+      width: 33%;
+      text-align: center;
+      color: $navbar-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: $font-size-small;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid transparent;
+      &.active {
+        border-bottom-color: $navbar-color;
+      }
+    }
+  }
+}

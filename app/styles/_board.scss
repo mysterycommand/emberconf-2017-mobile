@@ -1,0 +1,58 @@
+$box-padding: 3px;
+
+$bg-color1: transparentize(#eee, 0.5);
+$bg-color2: transparentize(#ccc, 0.5);
+
+.bingo-board {
+  width: calc(100% + 4px);
+  margin-left: -2px;
+  margin-right: -2px;
+  .bingo-board__row {
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    height: 20%;
+    &:nth-child(even) {
+      .bingo-board__spot:nth-child(even) {
+        background-color: $bg-color2;
+      }
+      .bingo-board__spot:nth-child(odd) {
+        background-color: $bg-color1;
+      }
+    }
+    .bingo-board__spot {
+      position: relative;
+      &:nth-child(even) {
+        background-color: opacify($bg-color1, 0.8);
+      }
+      &:nth-child(odd) {
+        background-color: opacify($bg-color2, 0.2);
+      }
+      &:nth-child(even) .bingo-board__spot-text {
+        background-color: $bg-color1;
+      }
+      &:nth-child(odd) .bingo-board__spot-text {
+        background-color: $bg-color2;
+      }
+      text-align: center;
+      vertical-align: middle;
+      white-space: normal;
+      word-break: break-word;
+      font-size: $font-size-small;
+      float: right;
+      padding: $box-padding;
+      margin: 0;
+      width: calc(20%);
+      height: 100px;
+      box-sizing: border-box;
+      .bingo-board__spot-text {
+        vertical-align: middle;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}

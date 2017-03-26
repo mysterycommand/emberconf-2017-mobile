@@ -1,0 +1,32 @@
+$speaker-portrait-size: 150px;
+
+.speakers {
+  list-style: none;
+  padding-left: 0;
+  .speaker-item {
+    min-height: $speaker-portrait-size;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #aaa;
+    &:nth-child(odd) {
+      background: #eee;
+    }
+    .speaker-item__portrait {
+      width: $speaker-portrait-size;
+      height: $speaker-portrait-size;
+      background-size: cover; 
+      border-bottom-right-radius: 10px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+    .speaker-item__name {
+      padding-top: 10px;
+      font-size: $font-size-h3;
+      line-height: $font-size-h3 * 1.2;
+    }
+    .speaker-item__bio {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+  }
+}

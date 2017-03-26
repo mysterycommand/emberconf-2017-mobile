@@ -1,0 +1,32 @@
+.grid {
+  .grid-row-5 {
+    white-space: nowrap;
+    .grid-row-5-cell {
+      position: relative;
+      width: calc(20% - 0px);
+      display: inline-block;
+      box-sizing: content-box;
+      height: 100px;
+      margin: 0;
+      margin-right: -2.5px;
+      margin-left: -2.5px;
+      padding: 0;
+      img {
+        max-width: 100%;
+      }
+      .speaker-name {
+        word-break: normal;
+        white-space: initial;
+        position: absolute;
+        bottom: -5px;
+        background: rgba(255,255,255, 0.75);
+        z-index: 999;
+        width: 100%;
+        padding: 2px;
+        text-align: center;
+        font-size: $font-size-small;
+        font-weight: bold;
+      }
+    }
+  }
+}

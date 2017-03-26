@@ -1,0 +1,17 @@
+<div class="speaker-item__portrait" style='{{_portraitStyle}}'>
+</div>
+<div class="speaker-item__name">
+  {{speaker.name}}
+</div>
+{{#if speaker.twitter-url}}
+  <a class='twitter-link' href="{{speaker.twitter-url}}" target='_blank'>{{fa-icon 'twitter'}} {{_speakerTwitterName}}</a>
+{{/if}}
+<div class="speaker-item__bio">{{speaker.bio}}</div>
+{{#if speaker.sessions.length}}
+<br>  
+<ul class="speaker-item__sessions">
+  {{#each speaker.sessions as |session|}}
+    <li>{{link-to session.title 'schedule' (query-params session=session.id)}}</li>
+  {{/each}}
+</ul>
+{{/if}}

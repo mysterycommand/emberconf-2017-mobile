@@ -1,0 +1,25 @@
+.schedule-items {
+  list-style: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  .schedule-item {
+  padding: 10px 5px;
+    &:nth-child(odd) {
+      background-color: #eee;
+    }
+    .schedule-item__title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .schedule-item__speaker {
+      color: #666;
+      margin-left: 10px;
+    }
+    .schedule-item__start-time {
+      color: $orange;
+    }
+    .schedule-item__description {
+      margin-top: 10px;
+    }
+  }
+}
