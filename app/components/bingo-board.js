@@ -6,6 +6,7 @@ export default Component.extend({
   game: inject.service(),
   classNames: ['bingo-board'],
   pickingTarget: null,
+
   _rows: computed('spaces', function() {
     let spaces = this.get('spaces') || [];
     let rows = [];
@@ -14,9 +15,11 @@ export default Component.extend({
     }
     return rows;
   }),
-  lookupSpeaker(id) {
-    debugger;
-  },
+
+  // lookupSpeaker(id) {
+  //   debugger;
+  // },
+
   actions: {
     spaceClicked(bingoTargetId) {
       this.set('pickingTarget', bingoTargetId);
