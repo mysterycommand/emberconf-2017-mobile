@@ -2,12 +2,12 @@
   "start_url": ".",
   "short_name": "Bingo",
   "icons": {
-    "152": "./img/icon-152.png",
-    "144": "./img/icon-72@2x.png",
-    "76": "./img/icon-76.png",
+    "57": "./img/icon-57.png",
     "72": "./img/icon-72.png",
-    "120": "./img/icon-60@2x.png",
+    "76": "./img/icon-76.png",
     "114": "./img/icon-57@2x.png",
-    "57": "./img/icon-57.png"
+    "120": "./img/icon-60@2x.png",
+    "144": "./img/icon-72@2x.png",
+    "152": "./img/icon-152.png"
   }
 }
