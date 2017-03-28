@@ -19,7 +19,8 @@ module.exports = function(defaults) {
 
     'esw-cache-fallback': {
       patterns: [
-        '//emberconf-2017-api.mike.works/(.+)',
+        'https://emberconf-2017-api.mike.works/(.+)',
+        'https://emberconf-2017-api.mike.works/api/(.+)',
       ],
       version,
     },
