@@ -1,9 +1,28 @@
 /* eslint-env node */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const version = require('./package.json').version;
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'asset-cache': {
+      include: [
+        '**/*.js',
+        '**/*.css',
+        '**/img/*.png'
+      ],
+      version,
+    },
+
+    'esw-index': {
+      version,
+    },
+
+    'esw-cache-fallback': {
+      patterns: [
+        '//emberconf-2017-api.mike.works/(.+)',
+      ],
+      version,
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
